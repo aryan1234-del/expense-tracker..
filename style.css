@@ -1,0 +1,73 @@
+body {
+  font-family: Arial;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+/* LIGHT MODE DEFAULT */
+body {
+  font-family: Arial;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+/* DARK MODE */
+.dark {
+  background: #121212 !important;
+  color: #eee !important;
+}
+
+.dark .card {
+  background: rgba(255,255,255,0.05);
+}
+
+.dark li {
+  background: rgba(255,255,255,0.1);
+}
+
+.dark canvas {
+  background: #222;
+}
+
+.container {
+  width: 350px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+button {
+  background: #00c6ff;
+  color: white;
+  cursor: pointer;
+}
+
+li {
+  background: rgba(0,0,0,0.3);
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+canvas {
+  background: white;
+  border-radius: 10px;
+  margin-top: 10px;
+}
