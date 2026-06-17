@@ -1,44 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expense Tracker Pro</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
 
-<div class="container">
-  <h1>💸 Expense Tracker</h1>
-  <button id="themeToggle">🌙 Toggle Theme</button>
+  <div class="container">
+    <h1>💸 Expense Tracker</h1>
+    <button id="themeToggle">🌙 Toggle Theme</button>
 
-  <div class="card">
-    <input type="text" id="desc" placeholder="Description">
-    <input type="number" id="amount" placeholder="Amount">
-    
-    <input type="date" id="date">
+    <div class="card">
+      <input type="text" id="desc" placeholder="Description">
+      <input type="number" id="amount" placeholder="Amount">
+      <input type="date" id="date">
 
-    <select id="category">
-      <option>Food</option>
-      <option>Travel</option>
-      <option>Shopping</option>
-      <option>Other</option>
-    </select>
+      <select id="category">
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Shopping</option>
+        <option>Other</option>
+      </select>
 
-    <button onclick="addExpense()">Add Expense</button>
+      <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <h2>Total: ₹<span id="total">0</span></h2>
+
+    <h3 id="insight"></h3>
+    <h3 id="prediction"></h3>
+
+    <canvas id="chart"></canvas>
+    <input type="text" id="search" placeholder="Search (food, travel, etc...)" onkeyup="updateUI()">
+
+    <ul id="list"></ul>
   </div>
 
-  <h2>Total: ₹<span id="total">0</span></h2>
+  <footer class="dh-footer-wrapper">
+    <div class="dh-internal-footer">
+      <div class="dh-candidate-card">
+        <span class="dh-badge">Candidate Developer</span>
+        <h4 class="dh-candidate-name">Aryan Prajapati</h4>
+        <p class="dh-candidate-email">aryanprajapati955@gmail.com</p>
+      </div>
 
-  <h3 id="insight"></h3>
-  <h3 id="prediction"></h3>
+      <div class="dh-action-block">
+        <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer" class="dh-hero-link-btn">
+          Built for Digital Heroes
+        </a>
+      </div>
+    </div>
+  </footer>
 
-  <canvas id="chart"></canvas>
-  <input type="text" id="search" placeholder="Search (food, travel, etc...)" onkeyup="updateUI()">
-
-  <ul id="list"></ul>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,19 +1,13 @@
-body {
-  font-family: Arial;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
 /* LIGHT MODE DEFAULT */
-body {
-  font-family: Arial;
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Isse content aur footer upar-niche aayenge, side mein nahi */
+  font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
   transition: 0.3s;
 }
 
@@ -35,8 +29,14 @@ body {
   background: #222;
 }
 
+/* Main Content Wrapper - Isko page ke center mein kiya hai */
 .container {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
+  margin: 20px auto; /* Auto margin se expense tracker screen ke beech mein rahega */
+  flex: 1; /* Yeh bachi hui saari jagah le lega taaki footer niche push ho jaye */
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .card {
@@ -51,6 +51,7 @@ input, select, button {
   margin: 5px 0;
   border: none;
   border-radius: 8px;
+  box-sizing: border-box; /* Input box ko container se bahar nikalne se rokta hai */
 }
 
 button {
@@ -70,4 +71,80 @@ canvas {
   background: white;
   border-radius: 10px;
   margin-top: 10px;
+}
+
+/* =======================================================
+   NEW FOOTER CSS (Jo aapko chahiye tha)
+   ======================================================= */
+.dh-footer-wrapper {
+  width: 100%;
+  margin-top: auto; /* Yeh footer ko hamesha sabse niche dhakelega */
+  background: rgba(0, 0, 0, 0.2); /* Semi-transparent black jo background ke sath match karega */
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode mein footer ka background thoda aur dark karne ke liye */
+.dark .dh-footer-wrapper {
+  background: #1e1e1e !important;
+  border-top: 1px solid #333;
+}
+
+.dh-internal-footer {
+  max-width: 350px; /* Tracker ke size jitna hi rakha hai taaki bura na dikhe */
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.dh-candidate-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dh-badge {
+  background: #00c6ff;
+  color: white;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.dh-candidate-name {
+  margin: 5px 0 2px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dh-candidate-email {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.dh-hero-link-btn {
+  display: inline-block;
+  background: transparent;
+  color: #00c6ff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #00c6ff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.dh-hero-link-btn:hover {
+  background: #00c6ff;
+  color: white;
 }
